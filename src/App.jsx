@@ -8,6 +8,7 @@ import Register from "./features/auth/pages/Register"
 function App() {
   return (
     <Routes>
+      <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
       <Route path="/booking" element={<Booking />} />
       <Route path="/booking2" element={<Booking2 />} />

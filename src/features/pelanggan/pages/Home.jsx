@@ -1,6 +1,8 @@
 import React from "react"
+import { useNavigate } from "react-router-dom"
 
 function Home() {
+  const navigate = useNavigate()
   const data = [
     {
       id: 1,
@@ -31,8 +33,14 @@ function Home() {
 
         <div className="flex items-center gap-6">
           <a className="hover:text-gray-300 cursor-pointer">Home</a>
-          <a className="hover:text-gray-300 cursor-pointer">Masuk</a>
-          <button className="bg-yellow-400 hover:bg-yellow-500 text-black px-4 py-1.5 rounded-lg font-semibold">
+          <a
+            onClick={() => navigate("/login")}
+            className="hover:text-gray-300 cursor-pointer">
+            Masuk
+          </a>
+          <button
+            onClick={() => navigate("/register")}
+            className="bg-yellow-400 hover:bg-yellow-500 text-black px-4 py-1.5 rounded-lg font-semibold">
             Daftar
           </button>
         </div>
