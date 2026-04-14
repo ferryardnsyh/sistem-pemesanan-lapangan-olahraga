@@ -1,20 +1,34 @@
-import { Routes, Route } from "react-router-dom"
-import Home from "./features/pelanggan/pages/Home"
-import Booking from "./features/pelanggan/pages/Booking"
-import Booking2 from "./features/pelanggan/pages/Booking2"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Login from "./features/auth/pages/Login"
 import Register from "./features/auth/pages/Register"
+import Homepage from "./features/pelanggan/pages/Homepage"
+import Dashboard from "./features/pelanggan/pages/Dashboard"
+import Booking from "./features/pelanggan/pages/Booking"
+import Halamanpesan from "./features/pelanggan/pages/Halamanpesan"
+import ProtectedRoute from "./components/ProtectedRoute"
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/booking" element={<Booking />} />
-      <Route path="/booking2" element={<Booking2 />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-    </Routes>
+    <BrowserRouter>
+      <Routes>
+        {/* AUTH */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/homepage" element={<Homepage />} />
+        <Route path="/Booking" element={<Booking />} />
+        <Route path="/Halamanpesan" element={<Halamanpesan />} />
+        {/* DASHBOARD */}
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+
+      </Routes>
+    </BrowserRouter>
   )
 }
 

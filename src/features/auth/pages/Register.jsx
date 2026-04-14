@@ -7,36 +7,22 @@ function Register() {
   return (
     <div className="min-h-screen bg-blue-300 flex items-center justify-center">
 
-      {/* CARD */}
       <div className="bg-white w-[400px] p-8 rounded-xl shadow-lg">
+        {/* BUTTON KEMBALI */}
+        <button 
+          onClick={() => navigate(-1)} 
+          className="absolute top-4 left-4 text-gray-500 hover:text-gray-800 transition flex items-center gap-1 text-sm font-medium"
+        >
+          ← Kembali
+        </button>
+          <h2 className="text-xl font-bold mb-6 text-center">Registrasi</h2>
 
-        <h2 className="text-xl font-bold mb-6 text-center">Registrasi</h2>
+        <input type="text" placeholder="Nama Lengkap" className="w-full mb-3 px-4 py-2 rounded-md bg-yellow-100 outline-none" />
+        <input type="email" placeholder="Email" className="w-full mb-3 px-4 py-2 rounded-md bg-yellow-100 outline-none" />
+        <input type="text" placeholder="Phone" className="w-full mb-3 px-4 py-2 rounded-md bg-yellow-100 outline-none" />
+        <input type="password" placeholder="Password" className="w-full mb-4 px-4 py-2 rounded-md bg-yellow-100 outline-none" />
 
-        <input
-          type="text"
-          placeholder="Nama Lengkap"
-          className="w-full mb-3 px-4 py-2 rounded-md bg-yellow-100 outline-none"
-        />
-
-        <input
-          type="email"
-          placeholder="Email"
-          className="w-full mb-3 px-4 py-2 rounded-md bg-yellow-100 outline-none"
-        />
-
-        <input
-          type="text"
-          placeholder="Phone"
-          className="w-full mb-3 px-4 py-2 rounded-md bg-yellow-100 outline-none"
-        />
-
-        <input
-          type="password"
-          placeholder="Password"
-          className="w-full mb-4 px-4 py-2 rounded-md bg-yellow-100 outline-none"
-        />
-
-        <button className="w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-md transition">
+        <button className="w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-md">
           Register
         </button>
 
@@ -49,7 +35,6 @@ function Register() {
             Login
           </span>
         </p>
-
       </div>
 
     </div>
