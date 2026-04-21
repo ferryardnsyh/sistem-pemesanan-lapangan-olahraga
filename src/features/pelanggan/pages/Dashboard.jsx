@@ -46,28 +46,52 @@ function Dashboard() {
         {/* CARD LIST */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-          <div className="bg-white p-4 rounded-xl shadow">
-            <h3 className="font-semibold">Futsal</h3>
-            <p className="text-sm text-gray-500">Indoor</p>
-            <button className="mt-3 bg-blue-900 text-white px-3 py-1 rounded">
-              Booking
-            </button>
+          {/* FUTSAL */}
+          <div className="bg-white rounded-xl shadow overflow-hidden">
+            <img
+              src="https://i.pinimg.com/736x/13/c3/42/13c3423cd3d2e12a6087d33e14093615.jpg"
+              alt="Futsal"
+              className="w-full h-40 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="font-semibold">Futsal</h3>
+              <p className="text-sm text-gray-500">Indoor</p>
+              <button className="mt-3 bg-blue-900 text-white px-3 py-1 rounded">
+                Booking
+              </button>
+            </div>
           </div>
 
-          <div className="bg-white p-4 rounded-xl shadow">
-            <h3 className="font-semibold">Basket</h3>
-            <p className="text-sm text-gray-500">Outdoor</p>
-            <button className="mt-3 bg-blue-900 text-white px-3 py-1 rounded">
-              Booking
-            </button>
+          {/* BASKET */}
+          <div className="bg-white rounded-xl shadow overflow-hidden">
+            <img
+              src="https://i.pinimg.com/1200x/00/d4/ea/00d4eaf5da36ee2f3fb79de64292ebd5.jpg"
+              alt="Basket"
+              className="w-full h-40 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="font-semibold">Basket</h3>
+              <p className="text-sm text-gray-500">Outdoor</p>
+              <button className="mt-3 bg-blue-900 text-white px-3 py-1 rounded">
+                Booking
+              </button>
+            </div>
           </div>
 
-          <div className="bg-white p-4 rounded-xl shadow">
-            <h3 className="font-semibold">Badminton</h3>
-            <p className="text-sm text-gray-500">Indoor</p>
-            <button className="mt-3 bg-blue-900 text-white px-3 py-1 rounded">
-              Booking
-            </button>
+          {/* BADMINTON */}
+          <div className="bg-white rounded-xl shadow overflow-hidden">
+            <img
+              src="https://i.pinimg.com/736x/0c/c0/f6/0cc0f6c8f3a0faa36ed7f941c70f9241.jpg"
+              alt="Badminton"
+              className="w-full h-40 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="font-semibold">Badminton</h3>
+              <p className="text-sm text-gray-500">Indoor</p>
+              <button className="mt-3 bg-blue-900 text-white px-3 py-1 rounded">
+                Booking
+              </button>
+            </div>
           </div>
 
         </div>
