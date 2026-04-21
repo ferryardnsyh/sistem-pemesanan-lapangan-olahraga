@@ -12,9 +12,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         {/* AUTH */}
+        <Route path="/" element={<Homepage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/homepage" element={<Homepage />} />
         <Route path="/Booking" element={<Booking />} />
         <Route path="/Halamanpesan" element={<Halamanpesan />} />
         {/* DASHBOARD */}
