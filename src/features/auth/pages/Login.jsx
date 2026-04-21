@@ -51,7 +51,12 @@ function Login() {
         />
 
         <p className="text-xs text-gray-600 mb-5 text-right cursor-pointer">
-          Lupa Password?
+          <span
+            onClick={() => navigate("/")}
+            className="text-gray-600 font-semibold cursor-pointer"
+          >
+            Lupa Password?
+          </span>
         </p>
 
         <button
@@ -71,7 +76,6 @@ function Login() {
           </span>
         </p>
       </div>
-
     </div>
   )
 }
