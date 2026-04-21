@@ -1,8 +1,38 @@
-import React from "react"
+import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 function Register() {
   const navigate = useNavigate()
+  const [nama, setNama] = useState("")
+  const [email, setEmail] = useState("")
+  const [telp, setTelp] = useState("")
+  const [password, setPassword] = useState("")
+  const handleRegister = async () => {
+    try {
+      const res = await fetch("http://localhost:3000/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          nama_user: nama,
+          email: email,
+          no_telp: telp,
+          password: password,
+          role: "user"
+        })
+      });
+
+      const data = await res.text();
+      alert(data);
+
+      navigate("/login");
+
+    } catch (err) {
+      console.log(err);
+      alert("Register gagal");
+    }
+  };
 
   return (
     <div className="min-h-screen bg-blue-300 flex items-center justify-center">
@@ -15,28 +45,39 @@ function Register() {
         <input
           type="text"
           placeholder="Nama Lengkap"
+          value={nama}
+          onChange={(e) => setNama(e.target.value)}
           className="w-full mb-3 px-4 py-2 rounded-md bg-yellow-100 outline-none"
         />
 
         <input
           type="email"
           placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           className="w-full mb-3 px-4 py-2 rounded-md bg-yellow-100 outline-none"
         />
 
         <input
           type="text"
           placeholder="Phone"
+          value={telp}
+          onChange={(e) => setTelp(e.target.value)}
           className="w-full mb-3 px-4 py-2 rounded-md bg-yellow-100 outline-none"
         />
 
         <input
           type="password"
           placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
           className="w-full mb-4 px-4 py-2 rounded-md bg-yellow-100 outline-none"
         />
 
-        <button className="w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-md transition">
+        <button
+          onClick={handleRegister}
+          className="w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-md transition"
+        >
           Register
         </button>
 
